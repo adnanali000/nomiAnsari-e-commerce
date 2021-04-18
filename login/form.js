@@ -24,6 +24,16 @@ subBut.addEventListener('click',(e)=>{
         message:message.value
     });
 
+    Email.send({
+        SecureToken : "c2bf1364-ac8c-4324-8588-e646f9db45e5",
+        To : email.value,
+        From : "adnan.museel123@gmail.com",
+        Subject : "Order Confirmation from OneStop Designer wear",
+        Body : "Your order has been recieved"
+    }).then(
+      message => alert(message)
+    );
+
     name.value = "";
     email.value = "";
     number.value = "";
